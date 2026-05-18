@@ -1,0 +1,10 @@
+# robots.txt — Nova Spacia
+# Dernière mise à jour : 2026-05-09
+
+User-agent: *
+Allow: /
+Disallow: /extras/
+Disallow: /images/extras/
+Disallow: /logos/extras/
+
+Sitemap: https://novaspacia.ma/sitemap.xml
