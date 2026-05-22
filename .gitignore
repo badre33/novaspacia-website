@@ -5,3 +5,6 @@ _social-templates/
 node_modules/
 .env
 .env.local
+
+# Fichiers internes — exports config / procédures qui n'ont pas à être publics
+nova-spacia-gtm-import.json

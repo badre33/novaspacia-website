@@ -1,0 +1,50 @@
+# netlify.toml — Nova Spacia
+# Configuration de build et headers de sécurité
+# Dernière mise à jour : 2026-05-22
+
+[build]
+  publish = "."
+
+# --- Headers de sécurité pour toutes les pages HTML ---
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Empêche le site d'être iframé par un site tiers (protection clickjacking)
+    X-Frame-Options = "SAMEORIGIN"
+    # Empêche le navigateur de "deviner" le MIME type (protection MIME sniffing)
+    X-Content-Type-Options = "nosniff"
+    # Limite l'info envoyée dans le header Referer aux sites tiers
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Désactive les API navigateur non utilisées par le site
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+    # Force HTTPS pendant 2 ans, inclut sous-domaines, soumissible au preload
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Content Security Policy — autorise GTM, GA4, Meta Pixel, Google Fonts, YouTube embed
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://i.ytimg.com; frame-src https://www.googletagmanager.com https://www.youtube.com https://www.youtube-nocookie.com https://maps.google.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://connect.facebook.net https://www.facebook.com https://stats.g.doubleclick.net https://region1.google-analytics.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me;"
+
+# --- Cache long pour les assets statiques ---
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# --- Pas de cache pour les HTML (déjà géré par Netlify Edge, on confirme) ---
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
