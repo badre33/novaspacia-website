@@ -101,6 +101,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Réalisations / études de cas -->
+  <url>
+    <loc>https://novaspacia.ma/realisations/anfa-prime-hospital.html</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Pages légales -->
   <url>
     <loc>https://novaspacia.ma/mentions-legales.html</loc>
