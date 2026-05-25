@@ -2065,6 +2065,36 @@ section { padding: 120px 0; position: relative; }
   border-color: var(--blanc);
 }
 .footer-social svg { width: 16px; height: 16px; }
+
+/* CTA "Laisser un avis Google" dans le footer */
+.footer-review-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: rgba(249, 249, 249, 0.06);
+  border: 1px solid rgba(204, 188, 159, 0.35);
+  border-radius: var(--radius-btn);
+  color: rgba(249, 249, 249, 0.85);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+.footer-review-cta svg { width: 14px; height: 14px; color: #FBBC04; }
+.footer-review-cta:hover {
+  background: rgba(204, 188, 159, 0.12);
+  border-color: var(--accent-light, #CCBC9F);
+  color: var(--blanc);
+  transform: translateY(-1px);
+}
+.footer-review-cta:focus-visible {
+  outline: 2px solid var(--accent-light, #CCBC9F);
+  outline-offset: 3px;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(249, 249, 249, 0.1);
   padding-top: 32px;
@@ -3419,7 +3449,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="https://www.instagram.com/novaspacia" target="_blank" rel="noopener noreferrer" aria-label="Instagram Nova Spacia">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
+          <a href="https://maps.app.goo.gl/KkASxk6HBQvEQMMu5" target="_blank" rel="noopener noreferrer" aria-label="Nova Spacia sur Google Maps">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </a>
         </div>
+        <a href="https://maps.app.goo.gl/KkASxk6HBQvEQMMu5" target="_blank" rel="noopener noreferrer" class="footer-review-cta" data-event="click_review_google">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          Laisser un avis Google
+        </a>
       </div>
     </div>
 
