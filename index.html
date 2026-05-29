@@ -1450,6 +1450,43 @@ section { padding: 120px 0; position: relative; }
   display: block;
   min-height: 540px;
 }
+/* Façade YouTube : vignette cliquable, ne charge le player qu'au clic (perf) */
+.yt-facade {
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+  background-color: var(--noir);
+  background-size: cover;
+  background-position: center;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.yt-facade-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(27, 27, 27, 0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.yt-facade-play::before {
+  content: '';
+  border-style: solid;
+  border-width: 13px 0 13px 22px;
+  border-color: transparent transparent transparent var(--blanc);
+  margin-left: 5px;
+}
+.yt-facade:hover .yt-facade-play,
+.yt-facade:focus-visible .yt-facade-play {
+  background: var(--marron);
+  transform: translate(-50%, -50%) scale(1.06);
+}
 .case-study-card {
   background: var(--noir);
   color: var(--blanc);
@@ -2875,7 +2912,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="case-study" id="realisations">
   <div class="container">
     <div class="case-study-frame reveal">
-      <iframe class="case-study-video" width="560" height="315" src="https://www.youtube.com/embed/pDEtHcxx3-Y?si=yptoA0CoVNis5GZl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <button type="button" class="case-study-video yt-facade" data-yt="pDEtHcxx3-Y" aria-label="Lire la vidéo : Anfa Prime Hospital" style="background-image:url('https://i.ytimg.com/vi/pDEtHcxx3-Y/hqdefault.jpg')">
+        <span class="yt-facade-play" aria-hidden="true"></span>
+      </button>
+      <script>
+      (function () {
+        var f = document.querySelector('.yt-facade');
+        if (!f) return;
+        f.addEventListener('click', function () {
+          var ifr = document.createElement('iframe');
+          ifr.className = 'case-study-video';
+          ifr.width = 560; ifr.height = 315;
+          ifr.src = 'https://www.youtube-nocookie.com/embed/' + f.getAttribute('data-yt') + '?autoplay=1';
+          ifr.title = 'Anfa Prime Hospital — Nova Spacia';
+          ifr.setAttribute('frameborder', '0');
+          ifr.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          ifr.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+          ifr.allowFullscreen = true;
+          f.replaceWith(ifr);
+        });
+      })();
+      </script>
       <div class="case-study-card">
         <span class="eyebrow eyebrow-light">Réalisation phare · Avril 2026</span>
         <h3 class="h3">Anfa Prime Hospital,<br>vaisseau amiral d'Akdital.</h3>
