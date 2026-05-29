@@ -226,7 +226,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Préchargement responsive du hero (élément LCP) : démarre le téléchargement immédiatement, mobile-first -->
+<link rel="preload" as="image" type="image/avif" fetchpriority="high"
+  imagesrcset="images/showroom-nova-spacia-mobilier-bureau-casablanca-800.avif 800w, images/showroom-nova-spacia-mobilier-bureau-casablanca-1400.avif 1400w, images/showroom-nova-spacia-mobilier-bureau-casablanca.avif 2364w"
+  imagesizes="100vw">
+<!-- Polices chargées en non-bloquant pour ne pas retarder le rendu -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
 <style>
 /* ============================================
@@ -2273,11 +2280,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <source
         type="image/avif"
         srcset="images/showroom-nova-spacia-mobilier-bureau-casablanca-800.avif 800w, images/showroom-nova-spacia-mobilier-bureau-casablanca-1400.avif 1400w, images/showroom-nova-spacia-mobilier-bureau-casablanca.avif 2364w"
-        sizes="(max-width: 768px) 800px, (max-width: 1280px) 1400px, 2364px">
+        sizes="100vw">
       <source
         type="image/jpeg"
         srcset="images/showroom-nova-spacia-mobilier-bureau-casablanca-800.jpg 800w, images/showroom-nova-spacia-mobilier-bureau-casablanca-1400.jpg 1400w, images/showroom-nova-spacia-mobilier-bureau-casablanca.jpg 2364w"
-        sizes="(max-width: 768px) 800px, (max-width: 1280px) 1400px, 2364px">
+        sizes="100vw">
       <img
         src="images/showroom-nova-spacia-mobilier-bureau-casablanca-1400.jpg"
         alt="Showroom Nova Spacia, aménagement professionnel premium au Maroc, partenaire Actiu certifié à Casablanca"
@@ -2790,7 +2797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="territory-card">
         <div class="territory-img">
           <span class="territory-num">1</span>
-          <img src="images/amenagement-bureau-tertiaire-casablanca.avif" alt="Tertiaire premium, Aménagement de bureaux corporate par Nova Spacia" decoding="async">
+          <img src="images/amenagement-bureau-tertiaire-casablanca.avif" alt="Tertiaire premium, Aménagement de bureaux corporate par Nova Spacia" loading="lazy" decoding="async">
         </div>
         <div class="territory-content">
           <h3 class="h3">Tertiaire premium</h3>
@@ -2808,7 +2815,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="territory-card">
         <div class="territory-img">
           <span class="territory-num">2</span>
-          <img src="images/amenagement-clinique-sante-maroc.avif" alt="Santé premium, Aménagement d'espaces de soin par Nova Spacia" decoding="async">
+          <img src="images/amenagement-clinique-sante-maroc.avif" alt="Santé premium, Aménagement d'espaces de soin par Nova Spacia" loading="lazy" decoding="async">
         </div>
         <div class="territory-content">
           <h3 class="h3">Santé nouvelle génération</h3>
@@ -2826,7 +2833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="territory-card">
         <div class="territory-img">
           <span class="territory-num">3</span>
-          <img src="images/amenagement-hotel-residentiel-marrakech.avif" alt="Hôtellerie & résidentiel, Aménagement haut de gamme par Nova Spacia" decoding="async">
+          <img src="images/amenagement-hotel-residentiel-marrakech.avif" alt="Hôtellerie & résidentiel, Aménagement haut de gamme par Nova Spacia" loading="lazy" decoding="async">
         </div>
         <div class="territory-content">
           <h3 class="h3">Hôtellerie & résidentiel</h3>
@@ -2844,7 +2851,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <article class="territory-card">
         <div class="territory-img">
           <span class="territory-num">4</span>
-          <img src="images/amenagement-universite-um6p-maroc.avif" alt="Éducation & enseignement supérieur, Aménagement d'universités et grandes écoles par Nova Spacia" decoding="async">
+          <img src="images/amenagement-universite-um6p-maroc.avif" alt="Éducation & enseignement supérieur, Aménagement d'universités et grandes écoles par Nova Spacia" loading="lazy" decoding="async">
         </div>
         <div class="territory-content">
           <h3 class="h3">Éducation & enseignement supérieur</h3>
