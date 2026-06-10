@@ -2298,6 +2298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
       <nav class="nav-links" aria-label="Navigation principale">
         <a href="#expertise">Expertise</a>
+        <a href="marques.html">Marques</a>
         <a href="#realisations">Réalisations</a>
         <a href="#about">À propos</a>
         <a href="#faq">FAQ</a>
@@ -3007,7 +3008,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 .st-header h2 { font-size: clamp(36px, 5vw, 52px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; color: var(--noir, #1B1B1B); margin-bottom: 16px; }
 .st-header h2 .accent { color: var(--accent, #735939); }
 .st-header p { font-size: 18px; line-height: 1.6; color: rgba(27,27,27,0.65); max-width: 680px; margin: 0 auto; }
-.st-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+.st-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+@media (max-width: 1080px) { .st-grid { grid-template-columns: 1fr 1fr; } }
 .st-card { background: #fff; border-radius: 14px; padding: 48px 42px 42px; border-top: 4px solid var(--accent, #735939); transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
 .st-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
 .st-card-eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent, #735939); font-weight: 700; margin-bottom: 14px; }
@@ -3053,6 +3055,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span>Cabines Actiu Qyos</span><span>Phone Booths Alea F40</span><span>Panneaux ECOcero</span>
         </div>
         <span class="cta">Faire mon diagnostic acoustique <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a href="marques.html" class="st-card">
+        <span class="st-card-eyebrow">Catalogue produits</span>
+        <h3>Les 6 marques<br>européennes Nova Spacia.</h3>
+        <p>Actiu, Estel, Alea, Ofifran, Bloon Paris, ECOcero. Le portefeuille curé qui équipe les sièges sociaux à Casa Finance City et les cliniques privées Akdital. Découvrez les 5 produits phares Actiu, distribués en exclusivité au Maroc.</p>
+        <div class="features">
+          <span>Actiu Trim</span><span>Actiu Lev</span><span>Actiu Qyos</span><span>Estel Brio</span><span>Alea F40</span><span>Bloon</span>
+        </div>
+        <span class="cta">Voir le catalogue marques <span aria-hidden="true">→</span></span>
       </a>
 
     </div>
