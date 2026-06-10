@@ -90,9 +90,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .product-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 96px; }
 .product-row:nth-child(even) .product-visual { order: 2; }
 .product-row:nth-child(even) .product-info { order: 1; }
-.product-visual { background: linear-gradient(135deg, #F4EEDF 0%, #E8DCC0 100%); border-radius: 20px; padding: 48px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; position: relative; overflow: hidden; }
-.product-visual svg { width: 100%; height: 100%; max-width: 360px; color: var(--noir); }
-.product-visual .product-no { position: absolute; top: 24px; left: 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: rgba(27,27,27,0.4); }
+.product-visual { background: linear-gradient(135deg, #F4EEDF 0%, #E8DCC0 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.product-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product-visual svg { width: 80%; height: 80%; padding: 48px; max-width: 360px; color: var(--noir); }
+.product-visual .product-no { position: absolute; top: 18px; left: 22px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #fff; background: rgba(0,0,0,0.5); padding: 4px 10px; border-radius: 100px; z-index: 2; }
 .product-info .product-cat { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--estel-gold); margin-bottom: 12px; }
 .product-info h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 18px; }
 .product-info .tagline { font-size: 18px; line-height: 1.55; color: rgba(27,27,27,0.85); margin-bottom: 22px; font-weight: 500; }
@@ -168,28 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="product-row">
       <div class="product-visual">
         <div class="product-no">01 / 03</div>
-        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Bureau exécutif Brio -->
-          <rect x="30" y="100" width="180" height="14" rx="2" fill="currentColor" fill-opacity="0.18"/>
-          <rect x="30" y="100" width="180" height="14" rx="2"/>
-          <!-- Caisson droit -->
-          <rect x="160" y="114" width="40" height="80" fill="currentColor" fill-opacity="0.1"/>
-          <rect x="160" y="114" width="40" height="80"/>
-          <line x1="165" y1="140" x2="195" y2="140" opacity="0.4"/>
-          <line x1="165" y1="160" x2="195" y2="160" opacity="0.4"/>
-          <circle cx="190" cy="130" r="1.5" fill="currentColor"/>
-          <circle cx="190" cy="150" r="1.5" fill="currentColor"/>
-          <!-- Pied gauche -->
-          <line x1="50" y1="114" x2="50" y2="200"/>
-          <line x1="45" y1="200" x2="55" y2="200"/>
-          <!-- Veine bois -->
-          <path d="M40 107 Q120 110, 200 107" stroke-width="0.8" opacity="0.3"/>
-          <!-- Accessoires desktop -->
-          <rect x="80" y="78" width="50" height="22" rx="1.5" fill="currentColor" fill-opacity="0.15"/>
-          <rect x="80" y="78" width="50" height="22" rx="1.5"/>
-          <circle cx="150" cy="92" r="6" fill="currentColor" fill-opacity="0.2"/>
-          <circle cx="150" cy="92" r="6"/>
-        </svg>
+        <img src="https://img.edilportale.com/products/ALTAGAMMA-Executive-desk-ESTEL-GROUP-71697-dim7fbab005.jpg" alt="Estel Altagamma, bureau exécutif italien Vénétie, distribué au Maroc par Nova Spacia" loading="lazy">
       </div>
       <div class="product-info">
         <div class="product-cat">Bureau exécutif · Iconic</div>
@@ -216,30 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="product-row">
       <div class="product-visual">
         <div class="product-no">02 / 03</div>
-        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Table de board More (forme bateau, vue 3/4) -->
-          <ellipse cx="120" cy="110" rx="90" ry="40" fill="currentColor" fill-opacity="0.18"/>
-          <ellipse cx="120" cy="110" rx="90" ry="40"/>
-          <!-- Veines -->
-          <path d="M40 110 Q120 105, 200 110" stroke-width="0.8" opacity="0.4"/>
-          <path d="M50 122 Q120 117, 190 122" stroke-width="0.8" opacity="0.3"/>
-          <!-- Pieds piétement -->
-          <line x1="80" y1="148" x2="78" y2="200"/>
-          <line x1="160" y1="148" x2="162" y2="200"/>
-          <line x1="60" y1="200" x2="180" y2="200" opacity="0.5"/>
-          <!-- Sièges autour (silhouettes) -->
-          <circle cx="55" cy="100" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="80" cy="80" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="120" cy="72" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="160" cy="80" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="185" cy="100" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="80" cy="140" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="120" cy="148" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <circle cx="160" cy="140" r="6" fill="currentColor" fill-opacity="0.25"/>
-          <!-- Micro audio center -->
-          <circle cx="120" cy="110" r="8" fill="currentColor" fill-opacity="0.35"/>
-          <circle cx="120" cy="110" r="8"/>
-        </svg>
+        <img src="https://img.edilportale.com/products/GRAND-MORE-Square-table-ESTEL-GROUP-304384-dim5be33117.jpg" alt="Estel Grand More, table de board italienne, distribuée au Maroc par Nova Spacia" loading="lazy">
       </div>
       <div class="product-info">
         <div class="product-cat">Table de board · Sur mesure</div>

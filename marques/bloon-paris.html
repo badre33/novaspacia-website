@@ -63,9 +63,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .product-row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 96px; }
 .product-row:nth-child(even) .product-visual { order: 2; }
 .product-row:nth-child(even) .product-info { order: 1; }
-.product-visual { background: linear-gradient(135deg, #F9E5E3 0%, #EFCBC8 100%); border-radius: 20px; padding: 48px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.product-visual { background: linear-gradient(135deg, #F9E5E3 0%, #EFCBC8 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3; position: relative; overflow: hidden; }
+.product-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .product-visual svg { width: 100%; height: 100%; max-width: 360px; color: #7A3D3A; }
-.product-visual .product-no { position: absolute; top: 24px; left: 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: rgba(122,61,58,0.5); }
+.product-visual .product-no { position: absolute; top: 18px; left: 22px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; color: #fff; background: rgba(0,0,0,0.5); padding: 4px 10px; border-radius: 100px; z-index: 2; }
 .product-info .product-cat { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bloon-rose); margin-bottom: 12px; }
 .product-info h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 18px; }
 .product-info .tagline { font-size: 18px; line-height: 1.55; color: rgba(27,27,27,0.85); margin-bottom: 22px; font-weight: 500; }
@@ -141,28 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="product-row">
       <div class="product-visual">
         <div class="product-no">01 / 03</div>
-        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Bloon Original : ballon habillé tissu sur base -->
-          <!-- Ballon -->
-          <circle cx="120" cy="118" r="62" fill="currentColor" fill-opacity="0.16"/>
-          <circle cx="120" cy="118" r="62"/>
-          <!-- Coutures du tissu (verticales) -->
-          <path d="M120 56 Q98 80, 95 118 Q98 156, 120 180" stroke-width="1" opacity="0.4"/>
-          <path d="M120 56 Q142 80, 145 118 Q142 156, 120 180" stroke-width="1" opacity="0.4"/>
-          <path d="M120 56 Q82 90, 78 118 Q82 146, 120 180" stroke-width="0.8" opacity="0.3"/>
-          <path d="M120 56 Q158 90, 162 118 Q158 146, 120 180" stroke-width="0.8" opacity="0.3"/>
-          <!-- Patch logo -->
-          <rect x="108" y="110" width="24" height="14" rx="3" fill="currentColor" fill-opacity="0.3"/>
-          <rect x="108" y="110" width="24" height="14" rx="3"/>
-          <!-- Base anti-roulis -->
-          <ellipse cx="120" cy="190" rx="48" ry="8" fill="currentColor" fill-opacity="0.22"/>
-          <ellipse cx="120" cy="190" rx="48" ry="8"/>
-          <!-- Indicateurs mouvement -->
-          <path d="M40 90 Q35 100, 40 110" opacity="0.4"/>
-          <path d="M30 85 Q22 100, 30 115" opacity="0.3"/>
-          <path d="M200 90 Q205 100, 200 110" opacity="0.4"/>
-          <path d="M210 85 Q218 100, 210 115" opacity="0.3"/>
-        </svg>
+        <img src="https://bloon-paris.com/cdn/shop/files/siege-ballon-ivoire.jpg?v=1736498659" alt="Bloon Paris Original, siège ballon ostéopathique français ivoire, distribué au Maroc par Nova Spacia" loading="lazy">
       </div>
       <div class="product-info">
         <div class="product-cat">Siège ballon · Bestseller</div>
@@ -189,27 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="product-row">
       <div class="product-visual">
         <div class="product-no">02 / 03</div>
-        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Bloon Eco : ballon recyclé avec accent vert -->
-          <circle cx="120" cy="118" r="62" fill="currentColor" fill-opacity="0.12"/>
-          <circle cx="120" cy="118" r="62"/>
-          <!-- Tissage recyclé (texture maillage) -->
-          <path d="M70 100 Q120 95, 170 100" stroke-width="0.8" opacity="0.4"/>
-          <path d="M65 120 Q120 115, 175 120" stroke-width="0.8" opacity="0.4"/>
-          <path d="M70 140 Q120 135, 170 140" stroke-width="0.8" opacity="0.4"/>
-          <path d="M85 75 L85 175" stroke-width="0.6" opacity="0.3"/>
-          <path d="M155 75 L155 175" stroke-width="0.6" opacity="0.3"/>
-          <!-- Label éco -->
-          <circle cx="120" cy="118" r="16" fill="currentColor" fill-opacity="0.28"/>
-          <circle cx="120" cy="118" r="16"/>
-          <path d="M115 118 L120 123 L127 113" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <!-- Base recyclée -->
-          <ellipse cx="120" cy="190" rx="48" ry="8" fill="currentColor" fill-opacity="0.22"/>
-          <ellipse cx="120" cy="190" rx="48" ry="8"/>
-          <!-- Symbole recyclage à côté -->
-          <path d="M30 100 L36 92 L42 100 L37 100 L37 110 L33 110 L33 100 Z" fill="currentColor" opacity="0.45"/>
-          <path d="M30 132 L36 140 L42 132 L37 132 L37 122 L33 122 L33 132 Z" fill="currentColor" opacity="0.45"/>
-        </svg>
+        <img src="https://bloon-paris.com/cdn/shop/files/siege-ballon-gris-silice.jpg?v=1773994433" alt="Bloon Paris Urban, siège ballon recyclé gris silice, distribué au Maroc par Nova Spacia" loading="lazy">
       </div>
       <div class="product-info">
         <div class="product-cat">Siège ballon · Édition recyclée</div>
@@ -236,28 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="product-row">
       <div class="product-visual">
         <div class="product-no">03 / 03</div>
-        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Bloon XS : version compacte -->
-          <circle cx="120" cy="130" r="48" fill="currentColor" fill-opacity="0.16"/>
-          <circle cx="120" cy="130" r="48"/>
-          <!-- Coutures -->
-          <path d="M120 82 Q105 105, 103 130 Q105 155, 120 178" stroke-width="1" opacity="0.4"/>
-          <path d="M120 82 Q135 105, 137 130 Q135 155, 120 178" stroke-width="1" opacity="0.4"/>
-          <!-- Patch logo -->
-          <rect x="112" y="124" width="16" height="10" rx="2" fill="currentColor" fill-opacity="0.3"/>
-          <rect x="112" y="124" width="16" height="10" rx="2"/>
-          <!-- Base compacte -->
-          <ellipse cx="120" cy="186" rx="38" ry="6" fill="currentColor" fill-opacity="0.22"/>
-          <ellipse cx="120" cy="186" rx="38" ry="6"/>
-          <!-- Indicateur taille XS -->
-          <line x1="50" y1="130" x2="70" y2="130" stroke-width="2"/>
-          <line x1="55" y1="125" x2="50" y2="130" stroke-width="2"/>
-          <line x1="55" y1="135" x2="50" y2="130" stroke-width="2"/>
-          <line x1="170" y1="130" x2="190" y2="130" stroke-width="2"/>
-          <line x1="185" y1="125" x2="190" y2="130" stroke-width="2"/>
-          <line x1="185" y1="135" x2="190" y2="130" stroke-width="2"/>
-          <text x="120" y="220" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="currentColor" opacity="0.6">FORMAT COMPACT</text>
-        </svg>
+        <img src="https://bloon-paris.com/cdn/shop/files/Coton.jpg?v=1774253599" alt="Bloon Paris Curly, siège ballon bouclette coton, distribué au Maroc par Nova Spacia" loading="lazy">
       </div>
       <div class="product-info">
         <div class="product-cat">Siège ballon · Compact</div>
