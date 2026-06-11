@@ -8,3 +8,9 @@ node_modules/
 
 # Fichiers internes — exports config / procédures qui n'ont pas à être publics
 nova-spacia-gtm-import.json
+
+# Supports réseaux sociaux (LinkedIn, etc.) — aucun rôle sur le site
+Carrousel-*.pdf
+
+# Rapports de session internes (stratégie, métriques, liens dashboards) — ne pas publier
+RAPPORT-SESSION-*.md
