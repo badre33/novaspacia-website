@@ -2,6 +2,8 @@
 # Dernière mise à jour : 2026-05-09
 
 User-agent: *
+Disallow: /marques.html
+Disallow: /marques/
 Allow: /
 Disallow: /extras/
 Disallow: /images/extras/

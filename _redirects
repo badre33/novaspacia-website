@@ -1,0 +1,6 @@
+# Section Marques temporairement masquee
+# Les fichiers HTML restent dans le repo pour reactivation rapide
+# apres reception des photos officielles fournisseurs.
+/marques        /404.html  404
+/marques.html   /404.html  404
+/marques/*      /404.html  404
